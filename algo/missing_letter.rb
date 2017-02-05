@@ -4,6 +4,14 @@
 
 def find_missing_letter(range)
 
+  letters = range.split("")
+  all_letters = (letters.first..letters.last).to_a
+
+  if all_letters != letters
+    range = (all_letters - letters).join("")
+  else 
+    range = nil 
+  end 
 end
 
 # Driver code - don't touch anything below this line.
